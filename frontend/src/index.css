@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SoulSync Professional Dating Platform - Sophisticated & Modern */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+
+    /* Professional Color Palette */
+    --navy-light: 225 15% 95%;
+    --navy: 225 25% 20%;
+    --navy-deep: 225 39% 15%;
+    
+    --violet-light: 262 100% 97%;
+    --violet: 262 83% 58%;
+    --violet-deep: 262 100% 40%;
+    
+    --slate-light: 210 40% 96%;
+    --slate: 210 40% 93%;
+    --slate-deep: 215 25% 27%;
+    
+    --emerald-light: 142 76% 96%;
+    --emerald: 142 71% 45%;
+    --emerald-deep: 142 72% 29%;
+
+    /* Professional Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)), hsl(var(--violet-deep)));
+    --gradient-primary: linear-gradient(135deg, hsl(var(--violet)), hsl(var(--violet-deep)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--slate-light)), hsl(var(--background)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--emerald)), hsl(var(--emerald-deep)));
+
+    /* Professional Shadows */
+    --shadow-elegant: 0 20px 25px -5px hsl(var(--navy) / 0.1), 0 10px 10px -5px hsl(var(--navy) / 0.04);
+    --shadow-glow: 0 0 50px hsl(var(--violet) / 0.15);
+    --shadow-card: 0 4px 6px -1px hsl(var(--navy) / 0.1), 0 2px 4px -1px hsl(var(--navy) / 0.06);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 225 39% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 225 39% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 225 39% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262 83% 68%;
+    --primary-foreground: 225 39% 5%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 215 25% 15%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 262 83% 68%;
+
+    /* Dark mode professional colors */
+    --navy-light: 225 15% 20%;
+    --navy: 225 25% 35%;
+    --navy-deep: 225 39% 15%;
+    
+    --violet-light: 262 100% 20%;
+    --violet: 262 83% 68%;
+    --violet-deep: 262 100% 50%;
+    
+    --slate-light: 210 40% 15%;
+    --slate: 210 40% 25%;
+    --slate-deep: 215 25% 40%;
+    
+    --emerald-light: 142 76% 20%;
+    --emerald: 142 71% 55%;
+    --emerald-deep: 142 72% 35%;
+
+    --sidebar-background: 225 39% 8%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 262 83% 68%;
+    --sidebar-primary-foreground: 225 39% 5%;
+    --sidebar-accent: 215 25% 15%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 262 83% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Professional animations */
+  @keyframes subtle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+  }
+
+  @keyframes pulse-elegant {
+    0%, 100% { box-shadow: 0 0 30px hsl(var(--violet) / 0.2); }
+    50% { box-shadow: 0 0 40px hsl(var(--violet) / 0.3); }
+  }
+
+  @keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Utility classes */
+  .subtle-float {
+    animation: subtle-float 4s ease-in-out infinite;
+  }
+
+  .pulse-elegant {
+    animation: pulse-elegant 3s ease-in-out infinite;
+  }
+
+  .gradient-flow {
+    background-size: 200% 200%;
+    animation: gradient-flow 6s ease infinite;
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  .accent-gradient {
+    background: var(--gradient-accent);
+  }
+}
